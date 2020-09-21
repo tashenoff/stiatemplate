@@ -1,0 +1,72 @@
+.about{
+  &__content{
+    padding: 65px;
+    @include mq(max, $BP-mobile) {
+      padding: 25px;
+    }
+
+
+h3{
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  &:after{
+    content: '';
+    display: block;
+    width: 60px;
+    border: 2px solid rgb(177, 217, 255);
+    margin-top: 10px;
+
+  }
+}
+    ul{
+      padding-left: 0;
+      list-style: none;
+    }
+    li{
+      display: -webkit-box;
+      &:before{
+        content: '';
+        display: block;
+        background: url(/img/tick.svg) no-repeat;
+        width: 21px;
+        height: 21px;
+        background-size: 20px 20px;
+        margin-right: 10px;
+
+
+      }
+
+    }
+
+    p{
+      max-width: 100%;
+    }
+
+  }
+
+  &__img{
+    height: 100%;
+    display: flex;
+    max-width: 100%;
+
+
+
+    img{
+      width: 100%;
+      object-fit: cover;
+
+      height: 100%;
+
+
+      @include mq(max $BP-mobile) {
+        max-height: 300px;
+      }
+    }
+  }
+}
+
+.phone-first{
+  @include mq(max $BP-mobile) {
+    order: -1;
+  }
+}

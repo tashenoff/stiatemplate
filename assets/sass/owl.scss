@@ -1,0 +1,70 @@
+.owl-carousel .nav-btn{
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 100px !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled{
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.owl-carousel .prev-slide{
+  background-image: url(/img/inst.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+  display: block;
+  left: 30%;
+
+  @include mq(max, $BP-mobile) {
+    top: 319px!important;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    left: 42%!important;
+    margin-top: 10px;
+  }
+
+}
+.owl-carousel .next-slide{
+  background-image: url(/img/inst.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+  display: block;
+  right: 30%;
+  margin-top: 10px;
+
+  @include mq(max, $BP-mobile) {
+    top: 319px!important;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    right: 42%!important;
+  }
+}
+
+
+.owl-theme .owl-dots, .owl-theme .owl-nav{
+  margin-top: 20px;
+}
+
+
+.img-fix{
+  img{
+    max-height: 70px;
+    width: auto!important;
+    padding: 7px;
+  }
+}
+
+
+.guest__item {
+  border: 1px solid rgba(0, 0, 0, 0.12156862745098039);
+}

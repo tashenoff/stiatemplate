@@ -1,0 +1,60 @@
+.footer{
+
+  &__form{
+    width: 400px;
+    padding: 20px;
+    background-image: url('/img/bgform.jpg');
+    border-radius: 2px;
+    img{
+      width: 20%;
+    }
+  }
+
+  &__bottom{
+    font-size: 12px;
+    background-color: #000;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+
+    //background-image: url('/img/footerbg.jpg');
+    p{
+      color:$secondary;
+    }
+  }
+  &__top{
+    display: flex;
+    width: 100%;
+   align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    color: #fff;
+    p{
+
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+footer{
+  position: relative;
+}
+
+.arrow{
+  &__bottom{
+
+    img{
+      width: 100%;
+    }
+
+    bottom: 100px;
+    position: absolute;
+    left: calc(50% - 26px);
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}

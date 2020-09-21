@@ -1,0 +1,64 @@
+[builderList]
+modelClass = "Alex\Exp\Models\Exp"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
+<section id="about-text">
+                <div class="container py-5">
+    <h3 class="text-center text-uppercase my-5">Наш опыт в цифрах</h3>
+    <div class="row benefits__inner text-center">
+
+        {% for record in records %}
+                             <div class="col-lg-3 col-6">
+
+                    <h1 class="benefits__number font-weight-bold">{{ record.number }}</h1>
+                    <p class="benefits__title">{{ record.title}}</p>
+                </div>
+                {% endfor %}
+
+        
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                var show = true;
+                var countbox = ".benefits__inner";
+                $(window).on("scroll load resize", function () {
+                    if (!show) return false;
+                    var w_top = $(window).scrollTop();
+                    var e_top = $(countbox).offset().top;
+                    var w_height = $(window).height();
+                    var d_height = $(document).height();
+                    var e_height = $(countbox).outerHeight();
+                    if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+                        $('.benefits__number').css('opacity', '1');
+                        $('.benefits__number').spincrement({
+                            thousandSeparator: "",
+                            duration: 1200
+                        });
+
+                        show = false;
+                    }
+                });
+
+            });
+        </script>
+           </div>
+    </div>
+    </section>
+</div>

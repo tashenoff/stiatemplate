@@ -1,0 +1,126 @@
+title = "about"
+url = "/about"
+layout = "default"
+is_hidden = 0
+
+[builderList]
+modelClass = "Alex\AboutUs\Models\Aboutus"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+    {% for record in records %}
+
+<div class="wrapper-for-modal" id="example">
+    <div class="shadow-wrapper" id="shadow">
+        <div class="main">
+            <section id="home">
+                <div class="banner banner--ab">
+   
+              <h1  class="text-center text-uppercase p-5 text-white">{{ record.title }}</h1>
+    
+</div>
+            </section>
+
+            <section>
+                <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="pt-5">
+                <p>
+                {{ record.text | raw }}
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+{% endfor %}
+
+
+       
+
+<div class="banner">  <h3 style="z-index: 2;" class="my-4 text-center text-white">Товарищество не останавливается на достигнутых результатах,</br> а стремится к постоянному росту и развитию!</h3>
+                    
+</div>
+
+<div class="container">
+
+    <div class="container">
+        <h3 class="text-center text-uppercase mt-5">Сертификаты</h3>
+        <div class="row">
+    
+            <div class="col-lg-12 py-5">
+    
+                <div class="owl-carousel owl-theme">
+    
+                 
+                        <a class="fancybox" data-fancybox="images" href="img/1-1.jpg"><img src="img/1-1.jpg" alt="" /></a>
+                      
+                
+    
+                      
+                        <a class="fancybox" data-fancybox="images" href="img/1-2.jpg"><img src="img/1-2.jpg" alt="" /></a>
+                      
+    
+                
+    
+    
+                
+                       
+                        <a class="fancybox" data-fancybox="images" href="img/2.jpg"><img src="img/2.jpg" alt="" /></a>
+                       
+    
+               
+    
+    
+                 
+                        <a class="fancybox" data-fancybox="images" href="img/3.jpg"><img src="img/3.jpg" alt="" /></a>
+                      
+    
+                
+    
+    
+                       
+                        <a class="fancybox" data-fancybox="images" href="img/4.jpg"><img src="img/4.jpg" alt="" /></a>
+                      
+    
+    
+            
+                      
+                        <a class="fancybox" data-fancybox="images" href="img/5.jpg"><img src="img/5.jpg" alt="" /></a>
+                        
+    
+            
+    
+    
+                   
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+</div>
+            </section>
+    
+        </div>
+
+    </div>
+</div>
