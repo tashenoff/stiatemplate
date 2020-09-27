@@ -1,4 +1,5 @@
 
+
 <div class="container">
     <h3 class="text-center text-uppercase mt-5">Нам доверяют</h3>
     <div class="row">
@@ -6,81 +7,12 @@
         <div class="col-lg-12 py-5">
 
             <div class="owl-carousel owl-theme">
-
+   {% for record in records %}
                 <div class="guest__item">
-                   <div class="img-fix"> <img src="{{  'assets/img/global.png' | theme }}" alt=""></div>
+                   <div class="img-fix"> <img src="{{  record.photos.path }}" alt=""></div>
                 </div>
-
-                <div class="guest__item">
-                    <div class="img-fix">
-                    <img src="{{  'assets/img/kmg.png' | theme }}" alt="">
-                    </div>
-
-                </div>
-
-
-                <div class="guest__item">
-                    <div class="img-fix">
-                    <img src="{{  'assets/img/kto.png' | theme }}" alt="">
-                    </div>
-
-                </div>
-
-
-                <div class="guest__item">
-                    <div class="img-fix">
-                    <img src="{{  'assets/img/petro.png' | theme }}" alt="">
-                    </div>
-
-                </div>
-
-
-                <div class="guest__item">
-                    <div class="img-fix">
-                    <img src="{{  'assets/img/hill.png' | theme }}" alt="">
-                    </div>
-
-                </div>
-
-
-                <div class="guest__item">
-                    <div class="img-fix">
-                    <img src="{{  'assets/img/hone.png' | theme }}" alt="">
-                    </div>
-
-                </div>
-
-
-                <div class="guest__item">
-                    <div class="img-fix">
-                    <img src="{{  'assets/img/inter.png' | theme }}" alt="">
-                    </div>
-
-                </div>
-
-                <div class="guest__item">
-                    <div class="img-fix">
-                    <img src="{{  'assets/img/kpo.png' | theme }}" alt="">
-                    </div>
-
-                </div>
-
-
-                <div class="guest__item">
-                    <div class="img-fix">
-                    <img src="{{  'assets/img/ncoc.png' | theme }}" alt="">
-                    </div>
-
-                </div>
-
-
-                <div class="guest__item">
-                    <div class="img-fix">
-                    <img src="{{  'assets/img/agp.png' | theme }}" alt="">
-                    </div>
-
-                </div>
-
+{% endfor %}
+                
             </div>
 
         </div>

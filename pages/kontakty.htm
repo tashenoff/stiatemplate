@@ -2,14 +2,32 @@ title = "Контакты"
 url = "/kontakty"
 layout = "default"
 is_hidden = 0
+
+[builderList]
+modelClass = "Alex\Contact\Models\Contact"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "phone"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
 ==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
 <div class="wrapper-for-modal" id="example">
     <div class="shadow-wrapper" id="shadow">
         <div class="main">
             <section id="home">
                 <div class="banner banner--contact">
     <div class="banner__wrapper">
-        <img src="/img/logo.png" alt="">
+        <img src="{{ 'assets/img/logo.png' | theme }}" alt="">
         <!-- <h1  class="text-center text-uppercase p-5 text-white">Контакты</h1> -->
     </div>
 </div>
@@ -20,13 +38,25 @@ is_hidden = 0
     <div class="row">
         <div class="col-lg-4"><div class="contact__wrapper">
 <div class="contact__header mb-4 p-4 border border-primary">
-    <p class="font-weight-light">Товарищество с ограниченной ответственностью «Стройинжиниринг Астана»</p>
+    {% for record in records %}
+    <p class="font-weight-light">{{ record.too | raw }}</p>
     <p class="font-weight-bold">Адрес:</p>
-    <p class="font-weight-light">Республика Казахстан</p>
-    <p class="font-weight-light"> г. Нур-Султан, район Есиль, жилой массив Шубар, ул. Нуртаса Ондасынова, д. 45</p>
+    <p class="font-weight-light">{{ record.adress }}</p>
+  
+    {% endfor %}
     <p class="font-weight-bold">  Телефон:</p>
-    <p class="font-weight-light"> +7 (7172) 24 16 27</p>
-    <p class="font-weight-light"> +7 (7172) 24 55 22</p>
+  
+  {% for record in records %}
+
+
+
+      {% for phone in record.phones %}
+    <p class="font-weight-light"> {{ phone.phone_tel }}</p>
+   
+   {% endfor %}
+
+   
+   {% endfor %}
 
 </div>
             <div class="contact__body bg-primary p-4 text-white">

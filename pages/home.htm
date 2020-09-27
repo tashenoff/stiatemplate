@@ -1,7 +1,27 @@
 title = "Demonstration"
 url = "/"
 layout = "default"
+is_hidden = 0
+
+[builderList]
+modelClass = "Alex\Brand\Models\Brand"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
 ==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
 
 <div class="wrapper-for-modal" id="example">
     <div class="shadow-wrapper" id="shadow">
