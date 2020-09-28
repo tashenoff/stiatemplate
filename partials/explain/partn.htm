@@ -8,7 +8,7 @@
             <div class="owl-carousel owl-theme">
    {% for record in records %}
                 <div class="guest__item">
-                   <div class="img-fix"> <img src="{{  record.Photo.path }}" alt=""></div>
+                   <div class="img-fix"> <img src="{{ record.imgs.path }}" alt=""></div>
                 </div>
 {% endfor %}
                 
