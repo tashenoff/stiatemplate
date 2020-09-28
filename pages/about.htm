@@ -19,6 +19,10 @@ pageNumber = "{{ :page }}"
 {% set detailsPage = builderList.detailsPage %}
 {% set detailsKeyColumn = builderList.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
+
     {% for record in records %}
 
 <div class="wrapper-for-modal" id="example">
@@ -59,65 +63,9 @@ pageNumber = "{{ :page }}"
                     
 </div>
 
-<div class="container">
 
-    <div class="container">
-        <h3 class="text-center text-uppercase mt-5">Сертификаты</h3>
-        <div class="row">
-    
-            <div class="col-lg-12 py-5">
-    
-                <div class="owl-carousel owl-theme">
-    
-                 
-                        <a class="fancybox" data-fancybox="images" href="img/1-1.jpg"><img src="img/1-1.jpg" alt="" /></a>
-                      
-                
-    
-                      
-                        <a class="fancybox" data-fancybox="images" href="img/1-2.jpg"><img src="img/1-2.jpg" alt="" /></a>
-                      
-    
-                
-    
-    
-                
-                       
-                        <a class="fancybox" data-fancybox="images" href="img/2.jpg"><img src="img/2.jpg" alt="" /></a>
-                       
-    
-               
-    
-    
-                 
-                        <a class="fancybox" data-fancybox="images" href="img/3.jpg"><img src="img/3.jpg" alt="" /></a>
-                      
-    
-                
-    
-    
-                       
-                        <a class="fancybox" data-fancybox="images" href="img/4.jpg"><img src="img/4.jpg" alt="" /></a>
-                      
-    
-    
-            
-                      
-                        <a class="fancybox" data-fancybox="images" href="img/5.jpg"><img src="img/5.jpg" alt="" /></a>
-                        
-    
-            
-    
-    
-                   
-    
-                </div>
-    
-            </div>
-        </div>
-    </div>
+{% partial 'explain/sert' %}
 
-</div>
             </section>
     
         </div>
