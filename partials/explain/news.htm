@@ -1,0 +1,33 @@
+[builderList]
+modelClass = "Alex\News\Models\News"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+   {% for record in records %}
+
+<div class="container">
+    <div class="row align-items-center">
+        <!-- <div class="col-lg-2"><img class="w-100" src="/img/logo.svg" alt=""></div> -->
+        <div class="col-lg-12">
+         <h3 style="margin-top: 20px;">{{ record.title }}</h3>
+            <p class="py-5">{{ record.text | raw }}</p>
+
+
+        </div>
+</div>
+</div>
+
+
+{% endfor %}
