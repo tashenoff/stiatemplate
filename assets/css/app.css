@@ -13192,7 +13192,7 @@ html {
   height: 100%;
 }
 .banner--ab {
-  background-image: url('https://images.unsplash.com/photo-1582810822512-cd067820a128?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1468&q=80');
+  background-image: url('/img/photo-1582810822512-cd067820a128.jpg');
   background-size: cover;
   background-position-y: center;
 }
